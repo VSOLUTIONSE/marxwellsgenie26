@@ -13,24 +13,36 @@ export default function Album() {
         <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-gold-deep">Gallery</div>
         <div className="mt-4 font-display text-[58px] leading-[110%]">From the album</div>
       </div>
-      <div className="flex h-[430px] w-[1440px] shrink-0 gap-[6px]">
-        {frames.map((frame) => (
-          <img
-            key={frame.image + frame.position}
-            src={frame.image}
-            srcSet={`/images/opt/${frame.image.replace("/images/", "").replace(".jpg", "")}-900.webp 900w`}
-            sizes="288px"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            className="min-w-0 flex-1 basis-0 bg-pale object-cover"
-            style={{ objectPosition: frame.position }}
-          />
-        ))}
+      <div className="w-[1440px] overflow-hidden">
+        <div className="album-track flex h-[430px]">
+          {[0, 1].map((group) => (
+            <div
+              key={group}
+              aria-hidden={group === 1}
+              className={`flex h-full shrink-0 gap-[6px] pr-[6px] ${
+                group === 1 ? "hidden max-md:flex" : "w-full max-md:w-auto"
+              }`}
+            >
+              {frames.map((frame) => (
+                <img
+                  key={frame.image + frame.position}
+                  src={frame.image}
+                  srcSet={`/images/opt/${frame.image.replace("/images/", "").replace(".jpg", "")}-900.webp 900w`}
+                  sizes="288px"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  className="min-w-0 flex-1 basis-0 bg-pale object-cover max-md:w-[300px] max-md:flex-none max-md:basis-auto"
+                  style={{ objectPosition: frame.position }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="pt-5">
         <div className="text-[9px] uppercase leading-3 tracking-[0.3em] text-muted">
-          A few of our favourite frames · Swipe to explore
+          A few of our favourite frames
         </div>
       </div>
     </section>

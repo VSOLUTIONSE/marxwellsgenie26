@@ -45,7 +45,7 @@ const questions: Question[] = [
 
 export default function QASection() {
   return (
-    <section className="flex w-[1440px] flex-col bg-forest px-[120px] pb-[124px] pt-[118px]">
+    <section className="flex w-[1440px] flex-col bg-forest px-[120px] pb-[124px] pt-[118px] max-md:px-[56px] max-md:pb-[76px] max-md:pt-[72px]">
       <div className="flex flex-col items-center pb-[62px]">
         <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-mist-sage">In Their Words</div>
         <h2 className="mt-4 font-serif text-[38px] italic leading-[130%] text-cream">
@@ -54,15 +54,15 @@ export default function QASection() {
       </div>
       <div className="flex flex-col">
         {questions.map((item) => (
-          <div key={item.question} className="flex gap-12 border-t border-[#F7F4F029] py-9">
-            <div className="w-[300px] shrink-0 font-serif text-[22px] italic leading-[138%] text-cream">
+          <div key={item.question} className="flex gap-12 border-t border-[#F7F4F029] py-9 max-md:flex-col max-md:gap-4 max-md:py-7">
+            <div className="w-[300px] shrink-0 font-serif text-[22px] italic leading-[138%] text-cream max-md:w-full">
               {item.question}
             </div>
-            <div className="flex flex-1 gap-10">
+            <div className="flex flex-1 gap-10 max-md:flex-col max-md:gap-4">
               {item.answers.map((answer) => (
                 <div
                   key={answer.who + answer.text}
-                  className="flex flex-1 basis-0 flex-col gap-2 border-l border-[#F7F4F029] pl-7"
+                  className="flex flex-1 basis-0 flex-col gap-2 border-l border-[#F7F4F029] pl-7 max-md:basis-auto max-md:border-l-0 max-md:border-t max-md:pl-0 max-md:pt-4"
                 >
                   <div className="text-[9.5px] font-medium uppercase leading-3 tracking-[0.26em] text-mist-sage">
                     {answer.who}

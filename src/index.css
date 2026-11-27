@@ -65,6 +65,27 @@
   }
 }
 
+@keyframes album-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .album-track {
+    animation: album-scroll 55s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .album-track {
+    animation: none;
+  }
+}
+
 .eq-bar {
   animation: eq-bar 1.1s ease-in-out infinite;
   transform-origin: center;

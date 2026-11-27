@@ -46,12 +46,12 @@ export default function Invitation() {
         <div className="font-display text-[26px] leading-8 tracking-[0.14em] text-forest-ink">M &amp; G</div>
         <div className="h-px w-[58px] bg-gold" />
       </div>
-      <div className="mt-[62px] flex w-[1100px] border-t border-line pt-8">
+      <div className="mt-[62px] flex w-[1100px] border-t border-line pt-8 max-md:w-full max-md:flex-col max-md:gap-6">
         {events.map((item, index) => (
           <div
             key={item.label}
-            className={`flex flex-1 basis-0 flex-col items-center gap-[10px] px-8 ${
-              index > 0 ? "border-l border-line" : ""
+            className={`flex flex-1 basis-0 flex-col items-center gap-[10px] px-8 max-md:basis-auto max-md:px-0 ${
+              index > 0 ? "border-l border-line max-md:border-l-0 max-md:border-t max-md:pt-6" : ""
             }`}
           >
             <div className="text-[9.5px] font-medium uppercase leading-3 tracking-[0.28em] text-gold-deep">
@@ -62,12 +62,12 @@ export default function Invitation() {
           </div>
         ))}
       </div>
-      <div className="mt-[46px] flex w-[1100px] border-t border-line pt-8">
+      <div className="mt-[46px] flex w-[1100px] border-t border-line pt-8 max-md:w-full max-md:flex-col max-md:gap-6">
         {places.map((item, index) => (
           <div
             key={item.label}
-            className={`flex flex-1 basis-0 flex-col items-center gap-[8px] px-8 ${
-              index > 0 ? "border-l border-line" : ""
+            className={`flex flex-1 basis-0 flex-col items-center gap-[8px] px-8 max-md:basis-auto max-md:px-0 ${
+              index > 0 ? "border-l border-line max-md:border-l-0 max-md:border-t max-md:pt-6" : ""
             }`}
           >
             <div className="text-[9.5px] font-medium uppercase leading-3 tracking-[0.28em] text-gold-deep">
@@ -78,7 +78,7 @@ export default function Invitation() {
           </div>
         ))}
       </div>
-      <div className="mt-[58px] flex w-[900px] flex-col items-center border-t border-line pt-[32px]">
+      <div className="mt-[58px] flex w-[900px] flex-col items-center border-t border-line pt-[32px] max-md:w-full">
         <div className="text-[9.5px] font-medium uppercase leading-3 tracking-[0.28em] text-gold-deep">Getting There</div>
         <p className="mt-[18px] text-center font-serif text-[19px] font-light leading-[168%] text-body">
           Coming from Warri or Benin, stop at any of these points along the Ughelli–Patani Expressway: Afisere
