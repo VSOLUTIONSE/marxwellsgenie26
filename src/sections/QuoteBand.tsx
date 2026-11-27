@@ -1,6 +1,6 @@
 export default function QuoteBand() {
   return (
-    <section className="relative flex h-[480px] w-[1440px] flex-col items-center justify-center overflow-hidden bg-pale">
+    <section className="relative flex h-[480px] w-[1440px] flex-col items-center justify-center overflow-hidden bg-pale max-md:h-[380px] max-md:w-full">
       <img
         src="/images/couple-gold-laugh.jpg"
         srcSet="/images/opt/couple-gold-laugh-900.webp 900w, /images/opt/couple-gold-laugh-1600.webp 1600w"
@@ -14,7 +14,7 @@ export default function QuoteBand() {
       <div className="absolute inset-x-0 top-0 h-[110px] bg-gradient-to-b from-cream to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-[110px] bg-gradient-to-t from-cream to-transparent" />
       <div className="relative flex flex-col items-center gap-[22px]">
-        <p className="max-w-[760px] text-center font-serif text-[38px] font-light italic leading-[140%] text-paper [text-shadow:#0A2B2159_0_2px_24px]">
+        <p className="max-w-[760px] px-6 text-center font-serif text-[38px] font-light italic max-md:text-[24px] leading-[140%] text-paper [text-shadow:#0A2B2159_0_2px_24px]">
           He noticed the joy. She found the home.
         </p>
         <div className="text-[9.5px] uppercase leading-3 tracking-[0.34em] text-[#FFFDF8D9]">Marxwell &amp; Genius</div>

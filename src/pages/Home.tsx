@@ -7,7 +7,7 @@ import Invitation from "../sections/Invitation";
 
 export default function Home() {
   return (
-    <main className="flex w-[1440px] flex-col">
+    <main className="flex w-[1440px] flex-col max-md:w-full">
       <HomeHero />
       <Invitation />
       <Explore />

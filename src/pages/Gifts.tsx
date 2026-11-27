@@ -4,7 +4,7 @@ import PageHero from "../sections/PageHero";
 
 export default function Gifts() {
   return (
-    <main className="flex w-[1440px] flex-col">
+    <main className="flex w-[1440px] flex-col max-md:w-full">
       <PageHero
         image="/images/couple-agbada-hold.jpg"
         position="50% 14%"

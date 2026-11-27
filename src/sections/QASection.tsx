@@ -45,17 +45,17 @@ const questions: Question[] = [
 
 export default function QASection() {
   return (
-    <section className="flex w-[1440px] flex-col bg-forest px-[120px] pb-[124px] pt-[118px] max-md:px-[56px] max-md:pb-[76px] max-md:pt-[72px]">
-      <div className="flex flex-col items-center pb-[62px]">
+    <section className="flex w-[1440px] flex-col bg-forest px-[120px] pb-[124px] pt-[118px] max-md:w-full max-md:px-6 max-md:pb-16 max-md:pt-16">
+      <div className="flex flex-col items-center pb-[62px] max-md:pb-8">
         <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-mist-sage">In Their Words</div>
-        <h2 className="mt-4 font-serif text-[38px] italic leading-[130%] text-cream">
+        <h2 className="mt-4 font-serif text-[38px] italic leading-[130%] text-cream max-md:text-[28px]">
           Six questions, answered honestly.
         </h2>
       </div>
       <div className="flex flex-col">
         {questions.map((item) => (
           <div key={item.question} className="flex gap-12 border-t border-[#F7F4F029] py-9 max-md:flex-col max-md:gap-4 max-md:py-7">
-            <div className="w-[300px] shrink-0 font-serif text-[22px] italic leading-[138%] text-cream max-md:w-full">
+            <div className="w-[300px] shrink-0 font-serif text-[22px] italic leading-[138%] text-cream max-md:w-full max-md:text-[19px]">
               {item.question}
             </div>
             <div className="flex flex-1 gap-10 max-md:flex-col max-md:gap-4">
@@ -67,7 +67,7 @@ export default function QASection() {
                   <div className="text-[9.5px] font-medium uppercase leading-3 tracking-[0.26em] text-mist-sage">
                     {answer.who}
                   </div>
-                  <p className="font-serif text-[18.5px] font-light leading-[160%] text-pale">{answer.text}</p>
+                  <p className="font-serif text-[18.5px] font-light leading-[160%] text-pale max-md:text-[16.5px]">{answer.text}</p>
                 </div>
               ))}
             </div>

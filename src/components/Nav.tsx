@@ -14,16 +14,16 @@ export default function Nav({ active }: { active?: string }) {
   const { isPlaying, toggle } = useMusic();
 
   return (
-    <header className="absolute left-0 top-0 z-20 flex w-[1440px] items-center justify-between px-14 py-[34px]">
+    <header className="absolute left-0 top-0 z-20 flex w-[1440px] items-center justify-between px-14 py-[34px] max-md:w-full max-md:flex-col max-md:items-start max-md:gap-4 max-md:px-6 max-md:py-5">
       <Link to="/" className="font-display text-[19px] leading-6 tracking-[0.12em] text-cream">
         M · G
       </Link>
-      <nav className="flex items-center gap-[38px]">
+      <nav className="flex items-center gap-[38px] max-md:w-full max-md:gap-5 max-md:overflow-x-auto max-md:pb-1">
         {links.map((link) => (
           <Link
             key={link.key}
             to={link.to}
-            className={`text-[10.5px] uppercase leading-[14px] tracking-[0.22em] transition-colors hover:text-white ${
+            className={`text-[10.5px] uppercase leading-[14px] tracking-[0.22em] transition-colors hover:text-white max-md:shrink-0 max-md:py-2 ${
               active === link.key ? "text-mist-sage" : "text-cream"
             }`}
           >

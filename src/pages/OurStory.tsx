@@ -5,7 +5,7 @@ import StorySection from "../sections/StorySection";
 
 export default function OurStory() {
   return (
-    <main className="flex w-[1441px] flex-col">
+    <main className="flex w-[1440px] flex-col max-md:w-full">
       <PageHero
         image="/images/couple-seated.jpg"
         position="51% 24%"

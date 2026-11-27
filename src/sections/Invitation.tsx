@@ -33,11 +33,11 @@ export default function Invitation() {
   return (
     <section
       id="the-day"
-      className="flex w-[1440px] flex-col items-center bg-cream px-14 pb-24 pt-[104px]"
+      className="flex w-[1440px] flex-col items-center bg-cream px-14 pb-24 pt-[104px] max-md:w-full max-md:px-6 max-md:pb-16 max-md:pt-16"
     >
-      <div className="flex w-[1200px] flex-col items-center border-t border-line pt-[34px]">
+      <div className="flex w-[1200px] flex-col items-center border-t border-line pt-[34px] max-md:w-full max-md:pt-8">
         <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-gold-deep">An Invitation</div>
-        <p className="mt-[34px] max-w-[820px] text-balance text-center font-serif text-[38px] font-light leading-[142%] text-ink">
+        <p className="mt-[34px] max-w-[820px] text-balance text-center font-serif text-[38px] max-md:text-[24px] font-light leading-[142%] text-ink">
           Together with our families, we would love for you to join us as we celebrate the beginning of forever.
         </p>
       </div>

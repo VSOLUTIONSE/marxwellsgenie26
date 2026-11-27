@@ -6,7 +6,7 @@ import QASection from "../sections/QASection";
 
 export default function QA() {
   return (
-    <main className="flex w-[1442px] flex-col">
+    <main className="flex w-[1440px] flex-col max-md:w-full">
       <PageHero
         image="/images/hands-clasped.jpg"
         position="52% 22%"

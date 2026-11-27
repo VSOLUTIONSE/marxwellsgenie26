@@ -92,22 +92,22 @@ export default function GiftsSection() {
   };
 
   return (
-    <section className="relative flex w-[1440px] flex-col bg-cream px-[140px] pb-[128px] pt-[118px]">
-      <div className="flex items-end justify-between gap-20 pb-[54px]">
+    <section className="relative flex w-[1440px] flex-col bg-cream px-[140px] pb-[128px] pt-[118px] max-md:w-full max-md:px-6 max-md:pb-16 max-md:pt-16">
+      <div className="flex items-end justify-between gap-20 pb-[54px] max-md:flex-col max-md:items-start max-md:gap-6 max-md:pb-8">
         <div className="flex flex-col">
           <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-gold-deep">With Gratitude</div>
-          <div className="pt-[18px] font-display text-[54px] leading-[108%]">Wedding Gifts</div>
+          <div className="pt-[18px] font-display text-[54px] leading-[108%] max-md:text-[34px]">Wedding Gifts</div>
         </div>
-        <p className="w-[360px] shrink-0 pb-2 font-serif text-lg font-light leading-[168%] text-[#4A5145]">
+        <p className="w-[360px] shrink-0 pb-2 font-serif text-lg max-md:w-full font-light leading-[168%] text-[#4A5145]">
           Your presence is the greatest gift. If you would also love to bless us as we build our home together, choose a
           card below.
         </p>
       </div>
-      <div className="flex w-[1160px] flex-wrap gap-[25px]">
+      <div className="flex w-[1160px] flex-wrap gap-[25px] max-md:w-full">
         {gifts.map((gift) => (
           <div
             key={gift.index}
-            className="relative flex w-[370px] shrink-0 flex-col overflow-hidden border border-[#E4E0D6] bg-pale px-[26px] pb-6 pt-[26px]"
+            className="relative flex w-[370px] shrink-0 flex-col overflow-hidden border border-[#E4E0D6] bg-pale px-[26px] pb-6 pt-[26px] max-md:w-full"
           >
             <img
               src={gift.image}
@@ -138,7 +138,7 @@ export default function GiftsSection() {
           </div>
         ))}
       </div>
-      <div className="mt-10 flex items-center justify-between border-t border-line pt-[26px]">
+      <div className="mt-10 flex items-center justify-between border-t border-line pt-[26px] max-md:flex-col max-md:items-start max-md:gap-4">
         <div className="font-serif text-base italic leading-[150%] text-gold-deep">
           Tap “Gift us” on any card to see our account details.
         </div>
@@ -156,7 +156,7 @@ export default function GiftsSection() {
       {open &&
         createPortal(
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-cover"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-cover p-4"
             style={{
               backgroundImage:
                 "linear-gradient(#0A2B21CC, #0A2B21CC), url('/images/opt/couple-seated-900.webp')",
@@ -168,7 +168,7 @@ export default function GiftsSection() {
               role="dialog"
               aria-modal="true"
               aria-label="Gift by transfer"
-              className="relative flex w-[520px] flex-col bg-cream px-[42px] pb-9 pt-[42px] shadow-[#0A2B21A6_0_40px_90px_-30px]"
+              className="relative flex w-[520px] flex-col bg-cream px-[42px] pb-9 pt-[42px] max-md:max-h-[calc(100vh-32px)] max-md:w-[calc(100vw-32px)] max-md:overflow-y-auto max-md:px-6 max-md:pb-8 max-md:pt-8 shadow-[#0A2B21A6_0_40px_90px_-30px]"
               onClick={(event) => event.stopPropagation()}
             >
               <div className="flex items-start justify-between gap-6">
@@ -176,7 +176,7 @@ export default function GiftsSection() {
                   <div className="text-[9.5px] font-medium uppercase leading-3 tracking-[0.3em] text-gold-deep">
                     Gift by transfer
                   </div>
-                  <div className="pt-[14px] font-display text-[40px] leading-[112%]">Send your gift</div>
+                  <div className="pt-[14px] font-display text-[40px] leading-[112%] max-md:text-[32px]">Send your gift</div>
                 </div>
                 <button
                   type="button"
@@ -200,7 +200,7 @@ export default function GiftsSection() {
                 <div className="h-px shrink-0 bg-pale" />
                 <div className="flex flex-col py-[14px]">
                   <div className="text-[8.5px] uppercase leading-3 tracking-[0.24em] text-gold-deep">Account number</div>
-                  <div className="pt-[6px] font-display text-[31px] leading-[120%] tracking-[0.08em]">
+                  <div className="pt-[6px] font-display text-[31px] leading-[120%] tracking-[0.08em] max-md:text-[26px]">
                     {account.number}
                   </div>
                 </div>

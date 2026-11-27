@@ -89,18 +89,18 @@ const chapters: Chapter[] = [
 
 export default function StorySection() {
   return (
-    <section className="flex w-[1440px] flex-col bg-cream px-[120px] pb-[96px] pt-[128px]">
-      <div className="flex flex-col items-center pb-[74px]">
+    <section className="flex w-[1440px] flex-col bg-cream px-[120px] pb-[96px] pt-[128px] max-md:w-full max-md:px-6 max-md:pb-14 max-md:pt-16">
+      <div className="flex flex-col items-center pb-[74px] max-md:pb-10">
         <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-gold-deep">Our Story</div>
-        <h2 className="mt-4 max-w-[760px] text-center font-display text-[58px] leading-[112%]">
+        <h2 className="mt-4 max-w-[760px] text-center font-display text-[58px] max-md:text-[34px] leading-[112%]">
           A glance, a hello, and a thousand quiet waits
         </h2>
       </div>
-      <div className="flex flex-col gap-[96px]">
+      <div className="flex flex-col gap-[96px] max-md:gap-12">
         {chapters.map((chapter) => (
           <div
             key={chapter.title}
-            className={`flex items-center gap-[90px] ${chapter.reversed ? "flex-row-reverse" : ""}`}
+            className={`flex items-center gap-[90px] max-md:flex-col max-md:items-start max-md:gap-6 ${chapter.reversed ? "flex-row-reverse" : ""}`}
           >
             <img
               src={chapter.image}
@@ -109,15 +109,15 @@ export default function StorySection() {
               alt=""
               loading="lazy"
               decoding="async"
-              className="h-[340px] w-[520px] shrink-0 bg-pale object-cover"
+              className="h-[340px] w-[520px] shrink-0 bg-pale object-cover max-md:h-[240px] max-md:w-full"
               style={{ objectPosition: chapter.position }}
             />
-            <div className="flex max-w-[520px] flex-col">
+            <div className="flex max-w-[520px] flex-col max-md:max-w-full">
               <div className="flex items-center gap-[14px]">
                 <div className="h-px w-[24px] bg-gold" />
                 <div className="text-[9.5px] uppercase leading-3 tracking-[0.28em] text-gold-deep">{chapter.date}</div>
               </div>
-              <div className="pt-5 font-serif text-[34px] italic leading-[130%] text-forest-ink">{chapter.title}</div>
+              <div className="pt-5 font-serif text-[34px] italic leading-[130%] text-forest-ink max-md:text-[26px]">{chapter.title}</div>
               <p className="pt-5 font-serif text-[17px] font-light leading-[178%] text-body">{chapter.body}</p>
             </div>
           </div>

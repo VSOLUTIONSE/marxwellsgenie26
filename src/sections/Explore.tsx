@@ -39,13 +39,13 @@ const chapters = [
 
 export default function Explore() {
   return (
-    <section id="explore" className="flex w-[1440px] flex-col bg-cream px-[140px] pb-[130px] pt-[118px]">
-      <div className="flex items-end justify-between gap-20 pb-[50px]">
+    <section id="explore" className="flex w-[1440px] flex-col bg-cream px-[140px] pb-[130px] pt-[118px] max-md:w-full max-md:px-6 max-md:pb-16 max-md:pt-16">
+      <div className="flex items-end justify-between gap-20 pb-[50px] max-md:flex-col max-md:items-start max-md:gap-6 max-md:pb-8">
         <div className="flex flex-col">
           <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-gold-deep">Keep exploring</div>
-          <div className="pt-[18px] font-display text-[54px] leading-[108%]">One day, one love, one story</div>
+          <div className="pt-[18px] font-display text-[54px] leading-[108%] max-md:text-[34px]">One day, one love, one story</div>
         </div>
-        <p className="w-[330px] shrink-0 pb-2 font-serif text-lg font-light leading-[168%] text-body">
+        <p className="w-[330px] shrink-0 pb-2 font-serif text-lg max-md:w-full font-light leading-[168%] text-body">
           The story, the questions, and the gifts: each has a room of its own. Step in and stay a while.
         </p>
       </div>
@@ -53,7 +53,7 @@ export default function Explore() {
         <Link
           key={chapter.index}
           to={chapter.to}
-          className="group flex items-center gap-[60px] border-t border-line py-9"
+          className="group flex items-center gap-[60px] border-t border-line py-9 max-md:flex-col max-md:items-start max-md:gap-6"
         >
           <img
             src={chapter.image}
@@ -62,19 +62,19 @@ export default function Explore() {
             alt=""
             loading="lazy"
             decoding="async"
-            className={`h-[280px] w-[440px] shrink-0 bg-pale object-cover transition-opacity group-hover:opacity-90 ${
+            className={`h-[280px] w-[440px] shrink-0 bg-pale object-cover transition-opacity group-hover:opacity-90 max-md:order-none max-md:h-[220px] max-md:w-full ${
               chapter.reversed ? "order-2" : ""
             }`}
             style={{ objectPosition: chapter.position }}
           />
-          <div className={`flex flex-1 flex-col ${chapter.reversed ? "pl-5" : "pr-5"}`}>
+          <div className={`flex flex-1 flex-col max-md:pl-0 max-md:pr-0 ${chapter.reversed ? "pl-5" : "pr-5"}`}>
             <div className="flex items-center gap-[14px]">
               <div className="text-[9px] leading-3 tracking-[0.2em] text-mist-sage">{chapter.index}</div>
               <div className="h-px w-[22px] bg-line" />
               <div className="text-[9.5px] uppercase leading-3 tracking-[0.28em] text-gold-deep">{chapter.eyebrow}</div>
             </div>
-            <div className="pt-[14px] font-display text-[38px] leading-[112%]">{chapter.title}</div>
-            <div className="w-[480px] pt-[10px] font-serif text-[17px] font-light leading-[168%] text-body">
+            <div className="pt-[14px] font-display text-[38px] leading-[112%] max-md:text-[28px]">{chapter.title}</div>
+            <div className="w-[480px] pt-[10px] font-serif text-[17px] max-md:w-full font-light leading-[168%] text-body">
               {chapter.copy}
             </div>
             <div className="flex items-center gap-[10px] pt-5">

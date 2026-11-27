@@ -8,13 +8,13 @@ const frames = [
 
 export default function Album() {
   return (
-    <section id="album" className="flex w-[1440px] flex-col items-center bg-cream pb-[22px]">
-      <div className="flex flex-col items-center pb-[52px] pt-24">
+    <section id="album" className="flex w-[1440px] flex-col items-center bg-cream pb-[22px] max-md:w-full">
+      <div className="flex flex-col items-center pb-[52px] pt-24 max-md:pb-8 max-md:pt-16">
         <div className="text-[10.5px] uppercase leading-[14px] tracking-[0.32em] text-gold-deep">Gallery</div>
-        <div className="mt-4 font-display text-[58px] leading-[110%]">From the album</div>
+        <div className="mt-4 font-display text-[58px] leading-[110%] max-md:text-[34px]">From the album</div>
       </div>
-      <div className="w-[1440px] overflow-hidden">
-        <div className="album-track flex h-[430px]">
+      <div className="w-[1440px] overflow-hidden max-md:w-full">
+        <div className="album-track flex h-[430px] max-md:h-[260px]">
           {[0, 1].map((group) => (
             <div
               key={group}
