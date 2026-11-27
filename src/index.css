@@ -76,7 +76,7 @@
 
 @media (max-width: 767px) {
   .album-track {
-    animation: album-scroll 55s linear infinite;
+    animation: album-scroll 28s linear infinite;
   }
 }
 

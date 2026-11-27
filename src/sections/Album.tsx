@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const frames = [
   { image: "/images/hero-couple.jpg", position: "50% 30%" },
   { image: "/images/hands-clasped.jpg", position: "50% 30%" },
@@ -7,6 +9,8 @@ const frames = [
 ];
 
 export default function Album() {
+  const [paused, setPaused] = useState(false);
+
   return (
     <section id="album" className="flex w-[1440px] flex-col items-center bg-cream pb-[22px] max-md:w-full">
       <div className="flex flex-col items-center pb-[52px] pt-24 max-md:pb-8 max-md:pt-16">
@@ -14,7 +18,16 @@ export default function Album() {
         <div className="mt-4 font-display text-[58px] leading-[110%] max-md:text-[34px]">From the album</div>
       </div>
       <div className="w-[1440px] overflow-hidden max-md:w-full">
-        <div className="album-track flex h-[430px] max-md:h-[260px]">
+        <div
+          className="album-track flex h-[430px] max-md:h-[260px]"
+          style={{ animationPlayState: paused ? "paused" : undefined }}
+          onPointerDown={() => setPaused(true)}
+          onPointerUp={() => setPaused(false)}
+          onPointerLeave={() => setPaused(false)}
+          onPointerCancel={() => setPaused(false)}
+          onTouchStart={() => setPaused(true)}
+          onTouchEnd={() => setPaused(false)}
+        >
           {[0, 1].map((group) => (
             <div
               key={group}
@@ -32,7 +45,7 @@ export default function Album() {
                   alt=""
                   loading="lazy"
                   decoding="async"
-                  className="min-w-0 flex-1 basis-0 bg-pale object-cover max-md:w-[300px] max-md:flex-none max-md:basis-auto"
+                  className="min-w-0 flex-1 basis-0 select-none bg-pale object-cover max-md:w-[300px] max-md:flex-none max-md:basis-auto" draggable={false}
                   style={{ objectPosition: frame.position }}
                 />
               ))}
