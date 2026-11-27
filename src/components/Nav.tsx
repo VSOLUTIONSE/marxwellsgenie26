@@ -14,7 +14,7 @@ export default function Nav({ active }: { active?: string }) {
       <Link to="/" className="font-display text-[19px] leading-6 tracking-[0.12em] text-cream">
         M · G
       </Link>
-      <nav className="flex items-center gap-[38px] max-md:w-full max-md:gap-5 max-md:overflow-x-auto max-md:pb-1">
+      <nav className="flex items-center gap-[38px] max-md:w-full max-md:gap-5  max-md:pb-1">
         {links.map((link) => (
           <Link
             key={link.key}
