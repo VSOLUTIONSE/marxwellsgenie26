@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f8f6f1;
+  --color-paper: #fffdf9;
+  --color-ink: #1b241f;
+  --color-forest: #0e4a36;
+  --color-forest-deep: #0a2b21;
+  --color-forest-ink: #0f5a3c;
+  --color-sage: #d8e6dc;
+  --color-moss: #4f7a63;
+  --color-gold: #c9a227;
+  --color-gold-deep: #8a6a1a;
+  --color-body: #4e5a51;
+  --color-pale: #efebe1;
+  --color-line: #dcded2;
+  --color-mist-sage: #a8c2ae;
+  --color-mist: #c4d7c8;
+  --color-muted: #86907f;
+
+  --font-display: "Italiana", Georgia, serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background-color: var(--color-sage);
+    color: var(--color-forest-deep);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-forest-ink);
+    outline-offset: 3px;
+  }
+}
+
+@keyframes eq-bar {
+  0%,
+  100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.eq-bar {
+  animation: eq-bar 1.1s ease-in-out infinite;
+  transform-origin: center;
+}
